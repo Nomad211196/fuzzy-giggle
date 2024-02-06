@@ -1,0 +1,324 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+p, ul, li, button, h1  {
+  margin: 0;
+  padding: 0;
+}
+
+button, a {
+  border: 0;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+button {
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+body {
+  color: #1B1C21;
+  font-size: 16px;
+  background: #F8F8F8;
+  font-weight: normal;
+  font-family: 'TT Lakes', sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+/* Title */
+
+.title {
+  position: relative;
+}
+
+.title h1 {
+  font-size: 28px;
+  line-height: 1.4286;
+  letter-spacing: -0.6px;
+}
+
+.title--line::before {
+  top: 50%;
+  width: 3px;
+  left: -33px;
+  height: 40px;
+  content: " ";
+  position: absolute;
+  border-radius: 10px;
+  background: #41F6D7;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* Grid */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Paragraph */
+
+.paragraph {
+  font-size: 14px;
+  line-height: 1.4285;
+  letter-spacing: 0.2px;
+}
+
+.paragraph p+p {
+  margin-top: 20px;
+}
+
+/* Header */
+
+.header {
+  padding: 18px 0;
+  background: #fff;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-nav {
+  padding: 0 11px;
+  border-radius: 50%;
+  background: #FF3E79;
+  width: 40px;height: 40px;
+  flex-shrink: 0;
+}
+
+.toggle-nav span {
+  display: block;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  width: 18px;height: 2px;
+  transition: all .2s;
+}
+
+.toggle-nav .icon-bar+.icon-bar {
+  margin-top: 6px;
+}
+
+.toggle-nav span:nth-child(2) {
+  width: 10px;
+}
+
+.toggle-nav span:last-child {
+  width: 14px;
+}
+
+.toggle-nav--active span:first-child {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.toggle-nav--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-nav--active span:last-child {
+  top: -8px;
+  width: 18px;
+  transform: rotate(-45deg);
+}
+
+.toggle-nav:hover {
+  background: #ed2764;
+}
+
+.logo {
+  margin-left: 42px;
+  position: relative;
+}
+
+.logo::before {
+  top: 50%;
+  width: 2px;
+  left: -22px;
+  height: 32px;
+  content: " ";
+  position: absolute;
+  border-radius: 5px;
+  background: #EAEAEA;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.panel {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.panel__item {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.panel__text {
+  color: #1B1C21;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.panel__icon {
+  border-radius: 50%;
+  background: #FF3E79;
+  width: 40px;height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+}
+
+.panel__item--separator {
+  margin-left: 42px;
+  position: relative;
+}
+
+.panel__item--separator::before {
+  top: 50%;
+  width: 2px;
+  left: -22px;
+  height: 32px;
+  content: " ";
+  border-radius: 5px;
+  position: absolute;
+  background: #EAEAEA;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.panel__item:hover .panel__icon {
+  background: #ed2764;
+}
+
+/* Services */
+
+.services {
+  padding: 42px 0 49px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head .panel__item {
+  margin-left: 32px;
+}
+
+/* Nav */
+
+.nav {
+  margin-top: 8px;
+}
+
+.nav__list {
+  gap: 2px;
+  display: flex;
+}
+
+.nav__link {
+  height: 40px;
+  color: #7E7E82;
+  padding: 0 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  background: #fff;
+  border-color: #B8FFEC;
+}
+
+/* Hero */
+
+.hero {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__left {
+  width: 46.41%;
+  padding-top: 8px;
+}
+
+.hero__right {
+  width: 50.2%;
+}
+
+.hero__more {
+  margin-top: 14px;
+  display: flex;
+}
+
+.hero__more a {
+  color: #1B1C21;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__more a svg {
+  margin-right: 16px;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+
+.hero__more a:hover svg {
+  transform: rotate(-90deg);
+}
+
+.hero__right img {
+  width: 100%;
+}
+
+
+
+
